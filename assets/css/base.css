@@ -1,0 +1,48 @@
+:root {
+    --white-color: #fff;
+    --black-color: #000;
+    --text-color: #333;
+}
+
+* {
+    box-sizing: inherit;
+    /* kế thừa từ thẻ chứa nó */
+}
+
+html {
+    font-size: 62.5%;
+    /* 100% = 16px */
+    /* 1 rem = 16px */
+    line-height: 1.6rem;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+}
+
+.grid {
+    width: 1200px;
+    max-width: 100%;
+    margin: 0 auto; /*căn giữa*/
+
+}
+
+.grid__full-width {
+    width: 100%;
+    /* sử dụng khi ko muốn width=1200px */
+}
+
+.grid__row {
+    display: flex; /* nhửng thẻ nằm trong class này sẽ nằm hàng ngang */
+    flex-wrap: wrap; /*nhảy xuống hàng khi vượt quá hàng ngang*/
+}
+
+/* Animation */
+@keyframes fadeIn { /*cho phép tạo ra chuyển động animation dạng frames*/
+    from{
+        opacity: 0;
+    }
+
+    to{
+        opacity: 1;
+    }
+} 
+

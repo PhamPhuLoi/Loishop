@@ -1,0 +1,137 @@
+/* Header */
+.header {
+    height: 120px;
+    background-color: #FA8BFF;
+    background-image: linear-gradient(45deg, #FA8BFF 0%, #2BD2FF 52%, #2BFF88 90%);
+    letter-spacing: 1px;
+}
+
+.header__navbar {
+    display: flex;
+    justify-content: space-between;
+}
+
+.header__navbar-list {
+    list-style: none;
+    padding-left: 0px;
+    margin-top: 10px;
+}
+
+.header__navbar-item {
+    margin: 0 8px;
+    position: relative; /* vị trí tương dối - lấy mình làm chuẩn */
+    min-height: 26px;
+}
+
+.header__navbar-item--has-qr:hover .header__qr {
+    display: block;
+    
+}
+
+.header__navbar-item,
+.header__navbar-item-link {
+    display: inline-block;
+    font-size: 1.5rem;
+    color: var(--white-color);
+    text-decoration: none;  /* bỏ gạch chân */
+    font-weight: 300;
+}
+
+.header__navbar-item,
+.header__navbar-item-link,
+.header__navbar-icon-link {
+    display: inline-flex;
+    align-items: center;
+}
+
+.header__navbar-item:hover,
+.header__navbar-icon-link:hover,
+.header__navbar-item-link:hover {
+    color: rgba(255,255,255, 0.7);
+    cursor: pointer; /*bàn tay*/
+}
+
+.header__navbar-item--strong {
+    font-weight: 500;
+}
+
+.header__navbar-item--separate::after {
+    content: "";
+    display: block;
+    position: absolute; /* vị trí tuyệt đối - phụ thuộc vào thẻ cha gần nhất có thuộc tính absolute */
+    border-left: 1px solid white;
+    height: 25px;
+    right: -9px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.header__navbar-icon-link {
+    color: var(--white-color);
+    text-decoration: none;
+}
+
+.header__navbar-icon {
+    font-size: 1.8rem;
+    margin: 0 4px;
+}
+
+.header__navbar-title--no-pointer {
+    cursor: text;
+    color: var(--white-color);
+}
+
+
+
+
+
+/* Header QR code  */
+.header__qr {
+    width: 186px;
+    position: absolute;
+    left: 0;
+    top: 118%;
+    background-color: var(--white-color);
+    padding: 8px;
+    border-radius: 10px;
+    display: none;
+    animation: fadeIn ease-in 0.5s;
+}
+
+.header__qr::before {
+    position: absolute;
+    left: 0;
+    top: -16px;
+    width: 100%;
+    height: 20px;
+    content: "";
+    display: block;
+    
+}
+
+.header__qr-img {
+    width: 100%;
+
+}
+
+.header__qr-apps {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.header__qr-link:nth-child(1) { /*nó sẽ lấy thằng con thứ 1*/
+    margin-left: 11px;
+}
+
+.header__qr-link:nth-child(2) { /*nó sẽ lấy thằng con thứ 2*/
+    margin-left: 11px;
+}
+/* hạn chế dùng child */
+
+
+.header__qr-download-img {
+    height: 14px;
+    
+
+}
