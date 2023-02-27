@@ -157,8 +157,29 @@
     cursor: default;
     animation: headerNotifyGrowth ease-in 0.25s;
     transform-origin: calc(100% - 20px) top ;      /* điều chỉnh tâm của animation */
+    will-change: opacity, transform ;              /* tối ưu chuyển động cho 2 thằng transform và opacity */
     display: none;
 
+}
+
+.header__notify::before {
+    content: "";
+    border-width: 20px 26px;
+    border-style: solid;
+    border-color: transparent transparent var(--white-color) transparent;
+    position: absolute;
+    right: 4px;
+    top: -29px;
+}
+
+.header__notify::after {
+    content: "";
+    display: block;
+    position: absolute;
+    right: 0;
+    top: -16px;
+    width: 90px;
+    height: 20px;
 }
 
 @keyframes headerNotifyGrowth {
