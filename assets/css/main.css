@@ -290,6 +290,7 @@
     background-size: cover;
     width: 500px;
     height: auto;
+    filter: contrast(200%);
 }
 
 
@@ -318,6 +319,7 @@
     cursor: pointer;
     font-size: 2.2rem;
     font-weight: 500;
+    
 }
 
 .auth-form__form {
@@ -358,7 +360,23 @@
 }
 
 .auth-form__controls {
-    margin-top: 80px;
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
+.auth-form__socials {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 40px;
+    margin-right: 40px;
+}
+
+.btn--with-icon {
+    color: var(--text-color);
+    
+}
 
