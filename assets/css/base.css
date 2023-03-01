@@ -49,6 +49,15 @@ html {
     }
 } 
 
+@keyframes growth {
+    from{
+        transform: scale(var(--growth-from));
+    }
+
+    to{
+        transform: scale(var(--growth-to));
+    }
+}
 
 /* Modal - phần mờ trang khi mở form đăng ký/nhập lên */
 
@@ -59,7 +68,8 @@ html {
     bottom: 0;
     left: 0;
     display: flex;
-    z-index: 2;
+    /* z-index: 2; */
+    animation: fadeIn linear 0.1s;
 }
 
 .modal__overlay {
@@ -70,9 +80,13 @@ html {
 }
 
 .modal__body {
+    --growth-from: 0.7;
+    --growth-to: 1;
+    /* nghĩa là nó sẽ di chuyển từ kích thước 70% đến kích thước nguyên vẹn là 1 */
     margin: auto;
     position: relative;
     z-index: 1;
+    animation: growth linear 0.1s;
 }
 
 /* Button style  */
