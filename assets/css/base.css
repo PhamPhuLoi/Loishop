@@ -208,6 +208,7 @@ html {
     list-style: none;
     display: none;
     box-shadow: var(--shadow-color);
+    z-index: 1;
 }
 
 .select-input__list::after {

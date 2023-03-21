@@ -1023,7 +1023,6 @@
     align-items: center;
     padding: 12px 22px;
     border-radius: 2px;
-
     background-color: rgba(0,0,0, 0.04);
 }
 
@@ -1089,10 +1088,26 @@
 }
 
 /* Product item  */
+.home-product {
+    margin-bottom: 10px;
+}
 
 .home-product-item {
-    background-color: var(--white-color);
+    display: block;
+    text-decoration: none;
+    position: relative;
     margin-top: 10px;
+    background-color: var(--white-color);
+    border-bottom-right-radius: 2px;
+    border-bottom-left-radius: 2px;
+    transition: transform linear 0.1s;
+    will-change: transform;
+}
+
+.home-product-item:hover {
+    cursor: pointer;
+    box-shadow: var(--shadow-color);
+    transform: translateY(-2px);
 }
 
 .home-product-item__img {
@@ -1160,10 +1175,9 @@ i.home-product-item__like-icon-fill {
 }
 
 .home-product-item__rating {
-    font-size: 1.2rem;
+    font-size: 0.8rem;
     color: #d5d5d5;
-    margin-left: -1px 0 0 auto;
-
+    margin-left:auto;
 }
 
 .home-product-item__star--gold {
@@ -1186,20 +1200,84 @@ i.home-product-item__like-icon-fill {
 .home-product-item__brand {
 
 }
+
 .home-product-item__origin-name {
     margin-left: auto;
 }
+
 .home-product-item__favourite {
-
+    position: absolute;
+    top: 10px;
+    left: -5px;
+    padding-right: 4px;
+    font-size: 1.2rem;
+    font-weight: 500;
+    line-height: 1.6rem;
+    color: var(--primary-color);
+    background-color: currentColor;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
 }
+
+
+.home-product-item__favourite::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4.5px;
+    filter: brightness(60%);
+    border-top: 5px solid currentColor;
+    border-left: 5px solid transparent;          /* hình tam giác  */
+   
+}
+
+.home-product-item__favourite span {
+    color: var(--white-color);
+    
+}
+
+.home-product-item__favourite i {
+    font-size: 0.9rem;
+    margin: 0 2px 0 5px ;
+    color: var(--white-color);
+}
+
 .home-product-item__sale-off {
-
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 40px;
+    height: 36px;
+    text-align: center;
+    background-color: yellow;
 }
+
+.home-product-item__sale-off::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    border-width: 0 20px 4px;
+    border-style: solid;
+    border-color: transparent yellow transparent yellow;
+}
+
 .home-product-item__sale-off-precent {
-
+    color: red;
+    font-weight: 900;
+    font-size: 1.4rem;
+    line-height: 1.4rem;
+    position: relative;
+    top: 2px;
 }
-.home-product-item__sale-off-label {
 
+.home-product-item__sale-off-label {
+    color: red;
+    font-size: 1.3rem;
+    line-height: 1.3rem;
+    position: relative;
+    top: 2px;
+    font-weight: 500;
 }
 
 
