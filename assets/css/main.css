@@ -1,4 +1,4 @@
-/* Header */
+/* Header -----------------------------------------------------*/
 .header {
     /* position: relative; */
     height: var(--header-height);
@@ -196,7 +196,7 @@
 
 
 
-/* Header QR code  */
+/* Header QR code  ----------------------------------------------*/
 .header__qr {
     width: 186px;
     position: absolute;
@@ -250,7 +250,7 @@
 
 
 
-/* Header notification  */
+/* Header notification  -----------------------------------------*/
 .header__notify {
     position: absolute;
     z-index: 1;
@@ -383,7 +383,7 @@
 
 }
 
-/* Authen modal  */
+/* Authen modal  -----------------------------------------------*/
 .modal__body {
     display: flex;
 }
@@ -545,7 +545,7 @@
     letter-spacing: 0.8px;
 }
 
-/* Header with search  */
+/* Header with search  ------------------------------------------*/
 .header-with-search {
     display: flex;
     align-items: center;
@@ -619,7 +619,7 @@
 }
 
 
-/* Cart  */
+/* Cart  -------------------------------------------------------*/
 .header__cart {
     width: 150px;
     text-align: center;
@@ -656,7 +656,7 @@
     cursor: default;
 }
 
-/* Dấu mũi tên trên cái div  */
+/* Dấu mũi tên trên cái div  -----------------------------------*/
 .header__cart-list::after {
     content: "";
     position: absolute;
@@ -719,6 +719,9 @@
 .header__cart-list-item {
     padding-left: 0;
     list-style: none;
+    height: 30vh;           /* chiều cao theo trình duyệt  */
+    overflow-y: auto;       /* khi vượt quá giới hạn thì nó sẽ hiện ra thanh roll */
+    
 }
 
 .header__cart-item {
@@ -751,9 +754,18 @@
 
 .header__cart-item-name {
     font-size: 1.4rem;
+    line-height: 2rem;
+    max-height: 4rem;
+    overflow: hidden;
     font-weight: 500;
     color: var(--text-color);
     margin: 0;
+    flex: 1;
+    margin-right: 16px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    text-align: left;
 }
 
 .header__cart-item-price {
@@ -894,7 +906,7 @@
 
 
 
-/* Search History  */
+/* Search History  --------------------------------------------*/
 .header__search-history {
     position: absolute;
     top: calc(100% + 10px);
@@ -948,7 +960,7 @@
 
 
 
-/* App container  */
+/* App container  -------------------------------------------*/
 .app__container {
     background-color: #f5f5f5;
     margin-top: 120px;
@@ -971,12 +983,6 @@
     border-bottom: 4px solid rgba(0,0,0, 0.05);
 }
 
-.category__heading-icon {
-    font-size: 1.4rem;
-    margin-right: 4px;
-    position: relative;
-    top: -1px;
-}
 
 .category-list {
     padding: 0 0 8px 0;
@@ -1016,7 +1022,7 @@
 }
 
 
-/* Home sort + filter */
+/* Home sort + filter --------------------------------------*/
 
 .home-filter {
     display: flex;
@@ -1087,7 +1093,7 @@
     color: #555;
 }
 
-/* Product item  */
+/* Product item  ---------------------------------------------*/
 .home-product {
     margin-bottom: 10px;
 }
@@ -1197,9 +1203,6 @@ i.home-product-item__like-icon-fill {
     font-size: 1.2rem;
 }
 
-.home-product-item__brand {
-
-}
 
 .home-product-item__origin-name {
     margin-left: auto;
@@ -1280,62 +1283,89 @@ i.home-product-item__like-icon-fill {
     font-weight: 500;
 }
 
+.home-product__pagination {
+    margin: 48px 0 32px 0;
+}
 
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/* Footer  -----------------------------------------------*/
 
 .footer {
-    height: 1200px;
+    padding-top: 16px;
+    border-top: 4px solid var(--primary-color);
+    background-color: var(--white-color);
+    letter-spacing: 1px;
+}
+
+.footer__heading {
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    color: var(--text-color);
+}
+
+.footer-list {
+    padding-left: 0;
+    list-style: none;
+}
+
+.footer-item__link {
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: #666;
+    padding: 2px 0;
+    display: flex;
+    align-items: center;
+}
+
+.footer-item__link:hover {
+    color: var(--primary-color);
+
+}
+
+.footer-item__icon {
+    font-size: 1.6rem;
+    margin-top: -1px;
+    margin: -1px 8px 0 0;
+}
+
+.footer__download {
+    display: flex;
+}
+
+.footer__download-qr {
+    width: 80px;
+    height: 80px;
+    border: 1px solid var(--border-color);
+}
+
+.footer__download-apps {
+    flex: 1;
+    margin-left: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.footer__download-app-img {
+    height: 16px;
+
+}
+
+.footer__download-app-img {
+    color: transparent;
+    text-decoration: none;
+}
+
+.footer__bottom {
+    background-color: #f5f5f5;
+    padding: 8px 0;
+}
+
+.footer__text {
+    margin: 0;
+    font-size: 1.2rem;
+    text-align: center;
 }
